@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JadaOS Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+
+            font-family: 'Segoe UI', sans-serif;
+
+            background: url("images/background.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            color: #F8F6FF;
+        }
+
+   
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    rgba(10,10,18,0.45),
+                    rgba(10,10,18,0.75)
+                );
+
+            backdrop-filter: blur(4px);
+        }
+
+    
+
+        .login-window {
+            position: relative;
+            z-index: 10;
+
+            width: 420px;
+
+            padding: 45px;
+
+            background: rgba(15,15,22,0.78);
+
+            backdrop-filter: blur(25px);
+
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 30px;
+
+            box-shadow:
+                0 0 35px rgba(244,114,182,0.15),
+                0 0 100px rgba(105,105,247,0.08);
+
+            text-align: center;
+        }
+
+  
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 3px solid #E879F9;
+
+            box-shadow:
+                0 0 25px #F472B6,
+                0 0 50px rgba(244,114,182,0.3);
+        }
+
+
+        h1 {
+            margin-top: 25px;
+            margin-bottom: 10px;
+
+            font-size: 52px;
+
+            font-family: 'Coda', sans-serif;
+
+            color: #E879F9;
+        }
+
+        .subtitle {
+            margin-bottom: 35px;
+
+            color: #B8AFCF;
+
+            letter-spacing: 1px;
+        }
+
+    
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+
+            padding: 16px 20px;
+
+            background: rgba(255,255,255,0.05);
+
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 18px;
+
+            outline: none;
+
+            color: #F8F6FF;
+            font-size: 15px;
+
+            transition:
+                border 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+        }
+
+        input::placeholder {
+            color: #9CA3AF;
+        }
+
+        input:focus {
+            border: 1px solid #E879F9;
+
+            background: rgba(255,255,255,0.08);
+
+            box-shadow:
+                0 0 20px rgba(232,121,249,0.25);
+        }
+
+     
+
+        button {
+            width: 100%;
+
+            margin-top: 10px;
+
+            padding: 16px;
+
+            background: rgba(232,121,249,0.12);
+
+            border: 1px solid #E879F9;
+            border-radius: 18px;
+
+            color: #F8F6FF;
+            font-size: 16px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            background: #E879F9;
+
+            color: #0D0D12;
+
+            transform: scale(1.02);
+
+            box-shadow:
+                0 0 25px rgba(232,121,249,0.45);
+        }
+
+
+
+        .footer-text {
+            margin-top: 25px;
+
+            font-size: 13px;
+
+            color: #9CA3AF;
+        }
+
+
+
+        @media (max-width: 500px) {
+
+            .login-window {
+                width: 92%;
+
+                padding: 35px 25px;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .profile-img {
+                width: 110px;
+                height: 110px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <section class="login-window">
+
+        <img
+            class="profile-img"
+            src="images/jada2.jpg"
+            alt="Jada Woods">
+
+        <h1>JadaWeb</h1>
+
+        <p class="subtitle">
+            Enter your email for my Newsletter
+        </p>
+
+        <div class="input-group">
+            <input
+                type="email"
+                placeholder="Email" id="input">
+        </div>
+
+        <button onclick="enterDesktop()">
+            Submit
+        </button>
+        <button onclick="continueAsGuest()">
+            No Thanks, Continue.
+        </button>
+
+        <p class="footer-text">
+            Jada Woods Portfolio Interface v1.0
+        </p>
+
+    </section>
+
+
+
+       <script>
+
+    function enterDesktop() {
+
+        const input = document.getElementById("input");
+
+        if (input.value.trim() === "") {
+
+            alert("Please enter your email.");
+
+            return;
+        }
+
+        window.location.href = "index2.html";
+    }
+
+    function continueAsGuest() {
+
+        window.location.href = "index2.html";
+    }
+
+</script>
+
+
+</body>
+</html>
+

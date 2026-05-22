@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jada OS</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+
+        <div id="Jada">
+            <h1>@JadaWoods</h1>
+        </div>
+
+        <div class="nav-icons">
+            <img src="images/Wifi.png" alt="">
+            <img src="images/Battery.png" alt="">
+            <p>9:41 PM</p>
+        </div>
+        <button class="power-button" onclick="powerOff()">
+
+    ⏻
+
+</button>
+
+    </nav>
+
+    <main>
+
+
+        <section class="desktop-window" id="home-window">
+
+    
+            <div class="window-header">
+
+                <div class="window-buttons">
+                    <span class="red" onclick="closeWindow('home-window')"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                </div>
+
+                <p>JadaOS.web</p>
+
+            </div>
+
+            <div class="window-content">
+
+                <div class="row">
+
+                    <div class="heading">
+
+                        <p>Hi, I'm</p>
+
+                        <h1 class="bigJ">Jada</h1>
+
+                        <h2>Aspiring Computer Scientist</h2>
+
+                        <p>
+                            I love problem solving and turning ideas into reality.
+                        </p>
+
+                        <button onclick="closeWindow('home-window')">
+                            Explore my Portfolio
+                        </button>
+
+                    </div>
+
+                    <img
+                        class="img1"
+                        src="images/jada2.jpg"
+                        alt="Picture of Jada Woods">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="folders">
+
+            <div class="folder" onclick="openWindow('about-window')">
+                <img src="images/folder_filled.png" alt="">
+                <p>About Me</p>
+            </div>
+
+            <div class="folder" onclick="openWindow('skills-window')">
+                <img src="images/folder_filled.png" alt="">
+                <p>Skills</p>
+            </div>
+
+            <div class="folder" onclick="openWindow('goals-window')">
+                <img src="images/folder_filled.png" alt="">
+                <p>Goals</p>
+            </div>
+
+            <div class="folder" onclick="openWindow('hobbies-window')">
+                <img src="images/folder_filled.png" alt="">
+                <p>Hobbies</p>
+            </div>
+
+            <div class="folder" onclick="openWindow('projects-window')">
+                <img src="images/folder_filled.png" alt="">
+                <p>Projects</p>
+            </div>
+
+
+        </section>
+
+       
+        <section class="desktop-window" id="about-window">
+
+            <div class="window-header">
+
+                <div class="window-buttons">
+                    <span class="red" onclick="closeWindow('about-window')"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                </div>
+
+                <p>AboutMe.web</p>
+
+            </div>
+
+            <div class="window-content">
+                 <div id="hobbies">About me</div>
+                <div class="text-container">
+
+                    <p>
+                        I’m a computer science student at <strong>Park University</strong>
+                        based in Kansas City, Missouri. I enjoy being creative and
+                        bringing ideas to life through technology.
+                    </p>
+
+                    <p>
+                        Outside of school and coding, I value spending time with
+                        my family and staying active. Working out is a big
+                        part of my routine and helps me stay focused and motivated.
+                    </p>
+
+                    <blockquote>
+                        "Life is like riding a bicycle. To keep your balance,
+                        you must keep moving."
+                    </blockquote>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="desktop-window" id="hobbies-window">
+
+            <div class="window-header">
+
+                <div class="window-buttons">
+                    <span class="red" onclick="closeWindow('hobbies-window')"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                </div>
+
+                <p>MyHobbies.web</p>
+
+
+            </div>
+
+            <div class="window-content">
+
+                <div id="hobbies">My Hobbies</div>
+
+                <ul class="hobbies">
+                    <li>Gym</li>
+                    <li>True Crime</li>
+                    <li>Hanging With My Family</li>
+                    <li>Pottery</li>
+                    <li>Running</li>
+                    <li>Watching YouTube</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <section class="desktop-window" id="skills-window">
+
+            <div class="window-header">
+
+                <div class="window-buttons">
+                    <span class="red" onclick="closeWindow('skills-window')"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                </div>
+
+                <p>MySkills.web</p>
+
+            </div>
+
+            <div class="window-content">
+
+                <div id="skills">My Skills</div>
+
+                <ol class="skills">
+                    <li>Leadership</li>
+                    <li>Critical Thinking</li>
+                    <li>Problem Solving</li>
+                    <li>Teamwork and Collaboration</li>
+                    <br>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>TypeScript</li>
+                </ol>
+
+            </div>
+
+        </section>
+
+ 
+        <section class="desktop-window" id="goals-window">
+
+            <div class="window-header">
+
+                <div class="window-buttons">
+                    <span class="red" onclick="closeWindow('goals-window')"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                </div>
+
+                <p>MyGoals.web</p>
+
+            </div>
+
+            <div class="window-content">
+
+                <div id="skills">My Goals</div>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Goal</th>
+                            <th>Deadline</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Build 4 Portfolio Projects</td>
+                            <td>June 2026</td>
+                            <td>In Progress</td>
+                        </tr>
+
+                        <tr>
+                            <td>Learn JavaScript</td>
+                            <td>May 2026</td>
+                            <td>In Progress</td>
+                        </tr>
+
+                        <tr>
+                            <td>Get Internship</td>
+                            <td>August 2026</td>
+                            <td>Pending</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </section>
+<section class="desktop-window" id="projects-window">
+
+            <div class="window-header">
+
+                <div class="window-buttons">
+                    <span class="red" onclick="closeWindow('projects-window')"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                </div>
+
+                <p>MyProjects.web</p>
+
+            </div>
+
+            <div class="window-content">
+
+                <div id="skills">My Projects</div>
+
+        <div class="container">
+        <div class="card">
+             <a target="_blank" href="https://github.com/jwoo2845/Slice-City2"><img src="images/slice.png" alt="placeholder image" width="250px" class="placeholder"></a>
+            <h1 style="font-size: large; text-align: center; margin-top: 10px;">Slice Pizza</h1>
+            <p> This is a resposive pizza webpage. I built this page using HTML, CSS, and JavaScript</p>
+        </div>
+        <div class="card">
+            <a target="_blank" href="#"><img src="images/zoo.png" alt="placeholder image" width="250px" class="placeholder"></a>
+
+            <h1 style="font-size: large; text-align: center; margin-top: 10px;">Zootopia</h1>
+            <p> This is a resposive zoo webpage. I built this page using HTML, CSS, and JavaScript</p>
+        </div>
+        <div class="card">
+            <a target="_blank" href="#"><img src="images/matties.png" alt="placeholder image" width="250px" class="placeholder"></a>
+            <h1 style="font-size: large; text-align: center; margin-top: 10px;">Matties Foods</h1>
+            <p>This is a resposive resturaunt webpage. I built this page using HTML and CSS</p>
+        </div>
+        <div class="card">
+            <a target="_blank" href="https://github.com/jwoo2845/Reserve.com"><img src="images/reserve.png" alt="placeholder image" width="250px" class="placeholder"></a>
+            <h1 style="font-size: large; text-align: center; margin-top: 10px;">MakeAReservation.com</h1>
+            <p> This is a resposive reservation webpage. I built this page using HTML and CSS</p>
+        </div>
+        </div>
+
+
+            </div>
+
+        </section>
+        </section>
+
+    </main>
+    <footer>
+        <a href="https://github.com/jwoo2845" target="_blank"><img src="images/github-logo_25231.png"></a>
+        <a href="" target="_blank"><img src="images/instagram_779093.png"></a>
+        <a href="www.linkedin.com/in/jada-woods-519527257" target="_blank"><img src="images/social_15047507.png"></a>
+    </footer>
+
+    <script>
+
+function openWindow(windowId) {
+
+    const selectedWindow = document.getElementById(windowId);
+
+    const currentDisplay = window.getComputedStyle(selectedWindow).display;
+
+    if (currentDisplay === "none") {
+
+        selectedWindow.style.display = "block";
+
+        selectedWindow.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    } else {
+
+        selectedWindow.style.display = "none";
+    }
+}
+
+function closeWindow(windowId) {
+
+    document.getElementById(windowId).style.display = "none";
+}
+function powerOff() {
+
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
